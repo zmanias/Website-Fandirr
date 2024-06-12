@@ -1,0 +1,27 @@
+.btn{
+	background: green;
+	color: #ffffff;
+	width: 250px;
+	height: 70px;
+	border-radius: 15px;
+}
+.id{
+    text-decoration: none;
+    color: inherit;
+}
+.kontak{
+  background-color: #001439;
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  left: 0;
+}
+.btn_wa{
+  text-decoration: none;
+  color: #000;
+  font-size: 20px;
+}
+.btn_wa i{
+  font-size: 40px;
+  padding: 0 5px;
+}
