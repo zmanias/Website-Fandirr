@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Website</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    .aos-init {
+      transition-property: opacity, transform;
+    }
+    .aos-animate {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    .aos-animate-up {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between">
+        <div class="flex space-x-4">
+          <div>
+            <a href="#" class="flex items-center py-5 px-2 text-gray-700">
+              <svg class="h-6 w-6 mr-1 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 12l-8-8m0 16l8-8 8 8m0-16l-8 8-8-8"/>
+              </svg>
+              <span class="font-bold">FANDIRR STORE</span>
+            </a>
+          </div>
+          <div class="hidden md:flex items-center space-x-1">
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Home</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">About</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Services</a>
+            <a href="#" class="py-5 px-3 text-gray-700 hover:text-gray-900">Contact</a>
+          </div>
+        </div>
+        <div class="hidden md:flex items-center space-x-1">
+          <a href="login.html" class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-400">Login</a>
+          <a href="signup.html" class="py-2 px-3 bg-blue-500 text-white rounded hover:bg-blue-400">Signup</a>
+        </div>
+        <div class="md:hidden flex items-center">
+          <button id="mobile-menu-button" class="mobile-menu-button">
+            <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="mobile-menu hidden md:hidden">
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Home</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">About</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Services</a>
+      <a href="#" class="block py-2 px-4 text-sm hover:bg-gray-200">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Tagline Section -->
+  <section class="bg-white py-20">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-4xl font-bold mb-2 text-gray-800">Selamat Datang Di Fandirr Store</h2>
+      <p class="text-lg text-gray-600 mb-8">Kami melayani jasa-jasa Installasi Bot WhatsApp, Bot Telegram, Panel Bot, VPS, Suntik Sosmed Dan Lain-lain</p>
+      <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300">Learn More</a>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Jasa Services</h2>
+      <div class="flex flex-wrap -mx-6">
+        <!-- Service 1 -->
+        <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6 text-center">
+              <span class="block text-3xl text-blue-500 mb-2">Bot Pushkontak<br>1 Hari</span>
+              <img src="img/bot.png" alt="Bot Pushkontak" class="mx-auto mb-6">
+              <p class="text-gray-600 mb-6">Automate your contacts and improve communication efficiency with our Bot Pushkontak service.</p>
+              <a href="checkout.html?product=Bot%20Pushkon%201%20Hari&price=100000" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300" data-price="100000">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 2 -->
+        <div class="w-full md:w-1/3 px-6 mb-12 md:mb-0" data-aos="fade-up" data-aos-duration="1000">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6 text-center">
+              <span class="block text-3xl text-blue-500 mb-2">Panel Bot</span>
+              <img src="img/panel.png" alt="Panel Bot" class="mx-auto mb-6">
+              <p class="text-gray-600 mb-6">Manage your bots easily with our intuitive Panel Bot service, designed for convenience and efficiency.</p>
+              <a href="checkout.html?product=Panel%20Bot&price=200000" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300" data-price="200000">Buy Now</a>
+            </div>
+          </div>
+        </div>
+        <!-- Service 3 -->
+        <div class="w-full md:w-1/3 px-6" data-aos="fade-up" data-aos-duration="1000">
+          <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="p-6 text-center">
+              <span class="block text-3xl text-blue-500 mb-2">VPS</span>
+              <img src="img/vps.png" alt="VPS" class="mx-auto mb-6">
+              <p class="text-gray-600 mb-6">Get reliable and high-performance virtual private servers tailored to your business needs.</p>
+              <a href="checkout.html?product=VPS&price=300000" class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300" data-price="300000">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <script>
+    const btn = document.querySelector("button.mobile-menu-button");
+    const menu = document.querySelector(".mobile-menu");
+
+    btn.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
+</body>
+</html>

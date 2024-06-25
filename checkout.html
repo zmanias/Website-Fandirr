@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+  <style>
+    /* Animasi fade-in */
+    .fade-in {
+      animation: fadeInAnimation 1s ease-in-out forwards;
+    }
+
+    @keyframes fadeInAnimation {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+  <div class="container mx-auto px-6 py-20">
+    <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-6 fade-in">
+      <h2 class="text-2xl font-bold mb-6 text-center">Checkout</h2>
+      <form id="checkout-form" action="ewallet_payment.html" method="GET">
+        <!-- Nama Produk -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="product-name">Nama Produk</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product-name" name="product" type="text" readonly>
+        </div>
+        <!-- Harga -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="product-price">Harga</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product-price" name="price" type="text" readonly>
+        </div>
+        <!-- Nomor WhatsApp -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="whatsapp">Nomor WhatsApp</label>
+          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="whatsapp" name="whatsapp" type="number" required>
+        </div>
+        <!-- Metode Pembayaran -->
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2">Metode Pembayaran</label>
+          <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="ewallet" id="ewallet" required>
+            <option value="dana">Dana</option>
+            <option value="ovo">Ovo</option>
+            <option value="gopay">Gopay</option>
+            <option value="qris">QRIS</option>
+          </select>
+        </div>
+        <!-- Tombol Checkout -->
+        <div class="text-center">
+          <button class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300" type="submit">Complete Purchase</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Simulasi data produk
+    const productName = 'Nama Produk';
+    const productPrice = 500000; // Rp 500.000
+
+    // Mengisi elemen dengan data produk
+    document.getElementById('product-name').value = productName;
+    document.getElementById('product-price').value = `Rp ${productPrice.toLocaleString()}`;
+  </script>
+</body>
+</html>
