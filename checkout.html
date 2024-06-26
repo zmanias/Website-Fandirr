@@ -4,73 +4,144 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Checkout</title>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
-  <style>
-    /* Animasi fade-in */
-    .fade-in {
-      animation: fadeInAnimation 1s ease-in-out forwards;
-    }
-
-    @keyframes fadeInAnimation {
-      from {
-        opacity: 0;
-      }
-      to {
-        opacity: 1;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
 </head>
 <body class="bg-gray-100">
-  <div class="container mx-auto px-6 py-20">
-    <div class="max-w-lg mx-auto bg-white rounded-lg shadow-lg p-6 fade-in">
-      <h2 class="text-2xl font-bold mb-6 text-center">Checkout</h2>
-      <form id="checkout-form" action="ewallet_payment.html" method="GET">
-        <!-- Nama Produk -->
+
+  <!-- Header -->
+  <header class="bg-white shadow-lg">
+    <div class="max-w-6xl mx-auto px-4">
+      <nav class="flex justify-between items-center py-4">
+        <a href="index.html" class="text-gray-700 font-bold text-lg">Home</a>
+        <ul class="flex space-x-4">
+          <li><a href="index.html" class="text-gray-700 hover:text-gray-900">Products</a></li>
+          <li><a href="contact.html" class="text-gray-700 hover:text-gray-900">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-8">
+    <div class="bg-white shadow-md rounded-md p-6">
+      <h1 class="text-2xl font-bold mb-4">Checkout</h1>
+      <form id="checkout-form">
+        <!-- Product Details -->
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="product-name">Nama Produk</label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product-name" name="product" type="text" readonly>
+          <h2 class="text-lg font-bold mb-2">Product Details</h2>
+          <div class="flex items-center justify-between p-4 bg-gray-100 rounded-md">
+            <div>
+              <h3 id="product-name" class="text-xl font-bold">Product Name</h3>
+              <p id="product-quantity" class="text-gray-600">Quantity: 1</p>
+            </div>
+            <p id="product-price" class="text-xl font-bold text-blue-500">$0.00</p>
+          </div>
         </div>
-        <!-- Harga -->
+
+        <!-- Transaction ID -->
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="product-price">Harga</label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="product-price" name="price" type="text" readonly>
+          <h2 class="text-lg font-bold mb-2">Transaction ID</h2>
+          <div class="p-4 bg-gray-100 rounded-md">
+            <p id="transaction-id" class="text-xl font-bold text-gray-700"></p>
+          </div>
         </div>
-        <!-- Nomor WhatsApp -->
+
+        <!-- User Information -->
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2" for="whatsapp">Nomor WhatsApp</label>
-          <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="whatsapp" name="whatsapp" type="number" required>
+          <h2 class="text-lg font-bold mb-2">User Information</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-gray-700">Full Name</label>
+              <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+            <div>
+              <label for="email" class="block text-gray-700">Email</label>
+              <input type="email" id="email" name="email" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+          </div>
         </div>
-        <!-- Metode Pembayaran -->
+
+        <!-- Payment Information -->
         <div class="mb-4">
-          <label class="block text-gray-700 text-sm font-bold mb-2">Metode Pembayaran</label>
-          <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="ewallet" id="ewallet" required>
-            <option value="dana">Dana</option>
-            <option value="ovo">Ovo</option>
-            <option value="gopay">Gopay</option>
-            <option value="qris">QRIS</option>
-          </select>
+          <h2 class="text-lg font-bold mb-2">Payment Information</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="payment-method" class="block text-gray-700">Payment Method</label>
+              <select id="payment-method" name="payment-method" class="w-full p-2 border border-gray-300 rounded-md">
+                <option value="dana">Dana</option>
+                <option value="ovo">Ovo</option>
+                <option value="gopay">Gopay</option>
+                <option value="qris">QRIS</option>
+              </select>
+            </div>
+            <div>
+              <label for="whatsapp" class="block text-gray-700">WhatsApp Number</label>
+              <input type="tel" id="whatsapp" name="whatsapp" class="w-full p-2 border border-gray-300 rounded-md">
+            </div>
+          </div>
         </div>
-        <!-- Tombol Checkout -->
-        <div class="text-center">
-          <button class="bg-blue-500 text-white py-2 px-4 rounded-full text-lg hover:bg-blue-400 transition duration-300" type="submit">Complete Purchase</button>
+
+        <!-- Payment Button -->
+        <div class="mt-6">
+          <button type="button" onclick="completePurchase()" class="w-full bg-blue-500 text-white p-3 rounded-md hover:bg-blue-400 transition duration-300">Complete Purchase</button>
         </div>
       </form>
     </div>
-  </div>
+  </main>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Footer -->
+  <footer class="bg-white text-center py-4 mt-8">
+    <p>&copy; 2024 Your Company. All rights reserved.</p>
+  </footer>
+
   <script>
-    AOS.init();
+    // Function to generate a random transaction ID
+    function generateTransactionId() {
+      const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let transactionId = '';
+      for (let i = 0; i < 10; i++) {
+        transactionId += chars.charAt(Math.floor(Math.random() * chars.length));
+      }
+      return transactionId;
+    }
 
-    // Simulasi data produk
-    const productName = 'Nama Produk';
-    const productPrice = 500000; // Rp 500.000
+    // Function to get query parameters
+    function getQueryParams() {
+      const params = {};
+      const queryString = window.location.search.substring(1);
+      const regex = /([^&=]+)=([^&]*)/g;
+      let match;
+      while (match = regex.exec(queryString)) {
+        params[decodeURIComponent(match[1])] = decodeURIComponent(match[2]);
+      }
+      return params;
+    }
 
-    // Mengisi elemen dengan data produk
-    document.getElementById('product-name').value = productName;
-    document.getElementById('product-price').value = `Rp ${productPrice.toLocaleString()}`;
+    // Extract product details from URL
+    const params = getQueryParams();
+    const productName = params.product || 'Unknown Product';
+    const productPrice = params.price || '0.00';
+
+    // Display product details
+    document.getElementById('product-name').textContent = productName;
+    document.getElementById('product-price').textContent = `Rp ${productPrice}`;
+
+    // Display transaction ID
+    const transactionId = generateTransactionId();
+    document.getElementById('transaction-id').textContent = transactionId;
+
+    // Function to complete purchase
+    function completePurchase() {
+      const name = document.getElementById('name').value;
+      const paymentMethod = document.getElementById('payment-method').value;
+      const whatsappNumber = document.getElementById('whatsapp').value;
+
+      const message = `Saya Ingin Order\n\n- Product: ${productName}\n- Harga: Rp ${productPrice}\n- Transaksi ID: ${transactionId}\n- Nama: ${name}\n- Pembayaran Lewat: ${paymentMethod}\n- WhatsApp: ${whatsappNumber}`;
+
+      const whatsappUrl = `https://wa.me/6283840600405?text=${encodeURIComponent(message)}`;
+      
+      window.open(whatsappUrl, '_blank');
+    }
   </script>
 </body>
 </html>
