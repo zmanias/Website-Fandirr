@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumentasi Ma Attaqwa 03</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom Styles */
+        /* Adjust spacing for mobile view */
+        @media (max-width: 768px) {
+            .section-spacing {
+                margin-top: 4rem;
+                margin-bottom: 4rem;
+            }
+        }
+
+        /* Style for gallery items */
+        .gallery-item {
+            transition: transform 0.2s ease;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-10px);
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navbar -->
+    <nav class="bg-blue-600 p-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-white text-2xl font-bold">DOKUMENTASI MA.ATTAQWA 03 TARUMAJAYA - BEKASI</a>
+            <div class="md:hidden">
+                <!-- Hamburger menu for mobile -->
+                <button id="mobile-menu-button" class="text-white focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="hidden md:block">
+                <!-- Navbar links for desktop -->
+                <a href="#about" class="text-white mx-2">Tentang</a>
+                <a href="#programs" class="text-white mx-2">Program</a>
+                <a href="#facilities" class="text-white mx-2">Fasilitas</a>
+                <a href="#contact" class="text-white mx-2">Kontak</a>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-blue-600">
+            <a href="#about" class="block py-2 px-4 text-white">Tentang</a>
+            <a href="#programs" class="block py-2 px-4 text-white">Program</a>
+            <a href="#facilities" class="block py-2 px-4 text-white">Fasilitas</a>
+            <a href="#contact" class="block py-2 px-4 text-white">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-4">
+
+        <!-- Hero Section -->
+        <section class="bg-white p-8 rounded-lg shadow-lg my-8 flex items-center justify-center flex-col">
+            <img src="logo.png" alt="Logo Ma Attaqwa 03" class="h-20 w-20 mb-4">
+            <h1 class="text-3xl font-bold mb-4 text-center">SELAMAT DATANG DI MA.ATTAQWA 03</h1>
+            <p class="text-lg mb-4 text-center">
+                Mendidik Generasi Muda dengan Integritas dan Kualitas
+            </p>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+            <h2 class="text-2xl font-semibold mb-4">Tentang Ma Attaqwa 03</h2>
+            <p class="mb-4">
+                Ma Attaqwa 03 adalah sebuah lembaga pendidikan yang berlokasi di [alamat]. Sekolah ini berkomitmen untuk menyediakan pendidikan berkualitas tinggi dengan berbagai program akademik dan non-akademik yang dirancang untuk mengembangkan potensi siswa secara holistik.
+            </p>
+        </section>
+
+        <!-- Programs Section -->
+        <section id="programs" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+            <h2 class="text-2xl font-semibold mb-4">Program Akademik</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pendidikan Dasar</h3>
+                    <p>
+                        Program yang dirancang untuk membangun fondasi pengetahuan dan keterampilan dasar bagi siswa.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pendidikan Menengah</h3>
+                    <p>
+                        Program yang bertujuan mengembangkan pengetahuan lebih lanjut dan keterampilan lanjutan untuk siswa.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Pendidikan Kejuruan</h3>
+                    <p>
+                        Program yang fokus pada pengembangan keterampilan praktis dan persiapan karir bagi siswa.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Facilities Section -->
+        <section id="facilities" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+            <h2 class="text-2xl font-semibold mb-4">Fasilitas</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Laboratorium Komputer</h3>
+                    <p>
+                        Dilengkapi dengan teknologi terbaru untuk mendukung pembelajaran teknologi informasi.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Perpustakaan</h3>
+                    <p>
+                        Menyediakan berbagai koleksi buku dan bahan bacaan untuk mendukung proses belajar mengajar.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Lapangan Olahraga</h3>
+                    <p>
+                        Fasilitas untuk mendukung kegiatan olahraga dan kebugaran siswa.
+                    </p>
+                </div>
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md">
+                    <h3 class="text-xl font-semibold mb-2">Ruang Kelas yang Nyaman</h3>
+                    <p>
+                        Ruang kelas yang dilengkapi dengan fasilitas modern untuk kenyamanan belajar siswa.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+            <h2 class="text-2xl font-semibold mb-4">Galeri Foto dan Video</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <!-- Example photo -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md gallery-item">
+                    <img src="foto1.jpg" alt="Foto 1" class="w-full rounded-lg">
+                    <h3 class="text-lg font-semibold mt-2">SISWI BERPRESTASI MA 03 WISUDA KELAS 12 2024</h3>
+                </div>
+
+                <!-- Example video -->
+                <div class="bg-gray-100 p-4 rounded-lg shadow-md gallery-item">
+                    <iframe src="judul.mp4" frameborder="0" allowfullscreen class="w-full"></iframe>
+                    <h3 class="text-lg font-semibold mt-2">Judul Video</h3>
+                </div>
+
+                <!-- Add more photos and videos as needed -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+            <h2 class="text-2xl font-semibold mb-4">Kontak</h2>
+            <p>
+                Alamat: JL TARUMA JAYA BEKASI JAWA BARAT<br>
+                Telepon: 08998621264 (Ahmad Faletehan SH)<br>
+                Email: madrasah.aliyah.attaqwa03@gmail.com
+            </p>
+          </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center">
+            &copy; 2024 Ma Attaqwa 03. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- JavaScript to toggle mobile menu -->
+    <script>
+        document.getElementById('mobile-menu-button').addEventListener('click', function () {
+            var menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+    </script>
+
+</body>
+
+</html>
