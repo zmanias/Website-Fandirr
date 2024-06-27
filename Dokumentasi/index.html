@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dokumentasi Ma Attaqwa 03</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <style>
         /* Custom Styles */
         /* Adjust spacing for mobile view */
@@ -66,7 +67,7 @@
     <main class="container mx-auto p-4">
 
         <!-- Hero Section -->
-        <section class="bg-white p-8 rounded-lg shadow-lg my-8 flex items-center justify-center flex-col">
+        <section class="bg-white p-8 rounded-lg shadow-lg my-8 flex items-center justify-center flex-col" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <img src="logo.png" alt="Logo Ma Attaqwa 03" class="h-20 w-20 mb-4">
             <h1 class="text-3xl font-bold mb-4 text-center">SELAMAT DATANG DI MA.ATTAQWA 03</h1>
             <p class="text-lg mb-4 text-center">
@@ -75,15 +76,15 @@
         </section>
 
         <!-- About Section -->
-        <section id="about" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+        <section id="about" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-2xl font-semibold mb-4">Tentang Ma Attaqwa 03</h2>
             <p class="mb-4">
-                Ma Attaqwa 03 adalah sebuah lembaga pendidikan yang berlokasi di [alamat]. Sekolah ini berkomitmen untuk menyediakan pendidikan berkualitas tinggi dengan berbagai program akademik dan non-akademik yang dirancang untuk mengembangkan potensi siswa secara holistik.
+                Ma Attaqwa 03 adalah sebuah lembaga pendidikan yang berlokasi di JL TARUMA JAYA BEKASI JAWA BARAT. Sekolah ini berkomitmen untuk menyediakan pendidikan berkualitas tinggi dengan berbagai program akademik dan non-akademik yang dirancang untuk mengembangkan potensi siswa secara holistik.
             </p>
         </section>
 
         <!-- Programs Section -->
-        <section id="programs" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+        <section id="programs" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-2xl font-semibold mb-4">Program Akademik</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <div class="bg-gray-100 p-4 rounded-lg shadow-md">
@@ -108,7 +109,7 @@
         </section>
 
         <!-- Facilities Section -->
-        <section id="facilities" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+        <section id="facilities" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-2xl font-semibold mb-4">Fasilitas</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div class="bg-gray-100 p-4 rounded-lg shadow-md">
@@ -139,7 +140,7 @@
         </section>
 
         <!-- Gallery Section -->
-        <section id="gallery" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+        <section id="gallery" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-2xl font-semibold mb-4">Galeri Foto dan Video</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
                 <!-- Example photo -->
@@ -150,23 +151,26 @@
 
                 <!-- Example video -->
                 <div class="bg-gray-100 p-4 rounded-lg shadow-md gallery-item">
-                    <iframe src="judul.mp4" frameborder="0" allowfullscreen class="w-full"></iframe>
+                    <video controls class="w-full">
+                        <source src="judul.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                     <h3 class="text-lg font-semibold mt-2">Judul Video</h3>
                 </div>
 
-                <!-- Add more photos and videos as needed -->
+                <!-- Tambahkan lebih banyak foto dan video sesuai kebutuhan -->
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section id="contact" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing">
+        <section id="contact" class="bg-white p-8 rounded-lg shadow-lg my-8 section-spacing" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
             <h2 class="text-2xl font-semibold mb-4">Kontak</h2>
             <p>
                 Alamat: JL TARUMA JAYA BEKASI JAWA BARAT<br>
                 Telepon: 08998621264 (Ahmad Faletehan SH)<br>
                 Email: madrasah.aliyah.attaqwa03@gmail.com
             </p>
-          </section>
+        </section>
 
     </main>
 
@@ -178,7 +182,10 @@
     </footer>
 
     <!-- JavaScript to toggle mobile menu -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+        AOS.init();
+
         document.getElementById('mobile-menu-button').addEventListener('click', function () {
             var menu = document.getElementById('mobile-menu');
             menu.classList.toggle('hidden');
