@@ -3,373 +3,315 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MA. ATTAQWA-03 - Situs Resmi</title>
-    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-
+    <title>PPDB MA Attaqwa 03 Tarumajaya - Bekasi</title>
+    
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
 
-    <style>
-        /* == Reset Dasar & Tipografi == */
-        body {
-            font-family: 'Roboto', sans-serif;
-            margin: 0;
-            background-color: #f9f9f9;
-            color: #333;
-            line-height: 1.6;
-        }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1.5rem; /* Padding untuk mobile */
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-        }
-        h1, h2, h3 {
-            margin-top: 0;
-            font-weight: 700;
-        }
-        h2 {
-            font-size: 2rem;
-            border-bottom: 2px solid #0056b3; /* Warna aksen sekolah */
-            padding-bottom: 0.5rem;
-            margin-top: 2.5rem;
-            margin-bottom: 1.5rem;
-            color: #0056b3;
-        }
-        h3 {
-            font-size: 1.25rem;
-            margin-bottom: 0.75rem;
-            color: #1a1a1a;
-        }
-        section {
-            margin-bottom: 2.5rem;
-        }
+    <link rel="stylesheet" href="style.css">
 
-        /* == Header & Navigasi == */
-        .header {
-            background-color: #ffffff;
-            border-bottom: 1px solid #ddd;
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-        }
-        .header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #333;
-            font-weight: 700;
-            font-size: 1.25rem;
-        }
-        .logo img {
-            width: 40px;
-            height: 40px;
-            margin-right: 0.75rem;
-        }
-        .nav-menu ul {
-            margin: 0;
-            padding: 0;
-            list-style: none;
-            display: flex;
-            gap: 1.5rem; /* Jarak antar menu */
-        }
-        .nav-menu a {
-            text-decoration: none;
-            color: #555;
-            font-weight: 500;
-            transition: color 0.3s ease;
-        }
-        .nav-menu a:hover {
-            color: #0056b3;
-        }
-        /* TODO: Tambahkan menu mobile/hamburger */
-
-        /* == Hero Section (Header Asli) == */
-        .hero-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 1rem;
-            margin-top: 2rem;
-        }
-
-        /* == Tata Letak Card & Grid (Mobile-First) == */
-        .card {
-            background-color: #ffffff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 1.5rem;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-            /* Memastikan semua card sama tinggi */
-            display: flex;
-            flex-direction: column;
-        }
-        .info-grid {
-            display: grid;
-            /* Kolom akan menyesuaikan otomatis */
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 1.5rem;
-        }
-
-        /* == Tombol (CTA) Konsisten == */
-        .button {
-            display: inline-block;
-            background-color: #0056b3;
-            color: #ffffff;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: 500;
-            text-align: center;
-            margin-top: 1rem;
-            transition: background-color 0.3s ease;
-        }
-        .button:hover {
-            background-color: #004494;
-        }
-        .button-download {
-            background-color: #1e7e34;
-        }
-        .button-download:hover {
-            background-color: #155724;
-        }
-
-        /* == Accordion (Untuk Seragam) == */
-        details {
-            margin-bottom: 0.5rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        summary {
-            font-weight: 700;
-            padding: 0.75rem 1rem;
-            cursor: pointer;
-            list-style: none; /* Hilangkan panah default */
-            display: block;
-        }
-        summary::after {
-            content: '+'; /* Tanda plus */
-            float: right;
-            font-size: 1.25rem;
-        }
-        details[open] summary::after {
-            content: '−'; /* Tanda minus */
-        }
-        details div {
-            padding: 0 1rem 1rem 1rem;
-            border-top: 1px solid #ddd;
-        }
-        details p {
-            margin-bottom: 0.5rem;
-        }
-
-        /* == Visi, Misi, Tujuan == */
-        #vision ul {
-            padding-left: 1.25rem;
-            margin-top: 0;
-        }
-
-        /* == Galeri == */
-        .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-        .gallery-grid img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover; /* Memastikan gambar seragam */
-            transition: transform 0.3s ease;
-        }
-        .gallery-grid img:hover {
-            transform: scale(1.05);
-        }
-        .gallery-footer {
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        /* == Footer == */
-        .footer {
-            background-color: #333;
-            color: #f0f0f0;
-            text-align: center;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-
-        /* == Media Query (Mobile-First) == */
-        @media (max-width: 768px) {
-            .hero-grid {
-                /* Tumpuk gambar di mobile */
-                grid-template-columns: 1fr;
-            }
-            .nav-menu {
-                /* Sembunyikan menu desktop di mobile */
-                /* Perlu JS untuk hamburger menu */
-                display: none; 
-            }
-            h2 {
-                font-size: 1.75rem;
-            }
-        }
-    </style>
 </head>
 <body>
 
-    <header class="header">
-        <div class="container">
-            <a href="index.html" class="logo">
-                <img src="img/icon.png" alt="Logo MA. ATTAQWA-03">
-                MA. ATTAQWA-03
-            </a>
-            <nav class="nav-menu">
-                <ul>
-                    <li><a href="#profil">Profil</a></li>
-                    <li><a href="#akademik">Akademik</a></li>
-                    <li><a href="#vision">Visi & Misi</a></li>
-                    <li><a href="#galeri">Galeri</a></li>
-                    <li><a href="ortu.html" class="button">Kontrol Ortu</a></li>
-                </ul>
-            </nav>
-            </div>
+    <header>
+        <nav class="navbar container">
+            
+            <img src="logo.jpg" alt="Logo MA Attaqwa 03" class="logo-img">
+
+            <ul class="nav-links">
+                <li><a href="#visi-misi">Visi & Misi</a></li>
+                <li><a href="#alur">Info PPDB</a></li>
+                <li><a href="#jurusan">Jurusan</a></li>
+                <li><a href="#galeri">Galeri</a></li>
+                <li><a href="#berita">Berita</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <section class="container hero-grid">
-            <img src="img/depan.jpg" alt="Tampak depan gedung MA. Attaqwa-03">
-            <img src="img/komputer.jpg" alt="Siswa belajar di lab komputer">
-            <img src="img/perpus.jpg" alt="Suasana perpustakaan sekolah">
-        </section>
-
-        <section id="profil" class="container">
-            <h2>Profil & Informasi</h2>
-            <div class="info-grid">
-                <div class="card">
-                    <h3>Identitas</h3>
-                    <p>
-                        MA. Attaqwa-03<br>
-                        Status : Swasta<br>
-                        NSM : 121232160006 <br>
-                        NPSN : 20279374
-                    </p>
-                    <a href="img/akred.jpg" download="img/akred.jpg" class="button button-download" target="_blank">Download Akreditasi</a>
-                </div>
-                <div class="card">
-                    <h3>Waktu Belajar</h3>
-                    <p>
-                        <b>Senin-Kamis</b> : 06.30 - 14.00 WIB<br>
-                        <b>Jum'at</b> : 06.30 - 11.00 WIB<br>
-                        <b>Sabtu</b> : 06.30 - 09.30 WIB
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Alamat</h3>
-                    <p>Jl. Raya Tarumajaya RT 003, RW 008, Desa Segaramakmur, Kec. Tarumajaya, Kab. Bekasi 17211</p>
-                    <a href="https://maps.app.goo.gl/Cv9DtA5YvCdUjoTa8" class="button" target="_blank">Lihat Google Maps</a>
-                </div>
+        
+        <section class="hero">
+            <div class="container">
+                <h1>Masa Depan Cemerlang Dimulai di Sini.</h1>
+                <p>
+                    Bergabunglah dengan MA Attaqwa 03 Tarumajaya. Wujudkan prestasi akademik terbaikmu 
+                    dalam lingkungan yang Islami dan modern.
+                </p>
+                <a href="#alur" class="cta-button">Lihat Alur Pendaftaran</a>
             </div>
         </section>
 
-        <section id="akademik" class="container">
-            <h2>Akademik & Kesiswaan</h2>
-            <div class="info-grid">
-                <div class="card">
-                    <h3>Informasi Seragam</h3>
+        <section class="unggulan" id="unggulan">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Kenapa Memilih MA Attaqwa 03?</h2>
+                </div>
+
+                <div class="unggulan-grid">
+                    <div class="unggulan-item">
+                        <h3>Akademik Unggul & Terpadu</h3>
+                        <p>Didukung tenaga pengajar profesional dengan kurikulum mutakhir yang mengintegrasikan ilmu umum dan nilai-nilai keagamaan.</p>
+                    </div>
+                    <div class="unggulan-item">
+                        <h3>Lingkungan Islami & Modern</h3>
+                        <p>Fokus pada pembinaan akhlak karimah, program Tahfidz, dan kajian intensif dalam lingkungan sekolah yang nyaman dan mendukung.</p>
+                    </div>
+                    <div class="unggulan-item">
+                        <h3>Ekskul Aktif & Berprestasi</h3>
+                        <p>Kembangkan bakat dan minat Anda melalui beragam pilihan ekstrakurikuler (Olahraga, Seni, KIR, Paskibra) yang telah terbukti berprestasi.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="visi-misi" id="visi-misi">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Visi & Misi Madrasah</h2>
+                </div>
+                
+                <div class="visi-misi-grid">
                     
-                    <details>
-                        <summary>Seragam Putri</summary>
-                        <div>
-                            <p><b>Senin-Selasa</b>: Jilbab Hitam, Baju Putih, Rok Hitam, Sepatu Hitam</p>
-                            <p><b>Rabu-Kamis</b>: Jilbab Putih, Baju Batik, Rok Hitam, Sepatu Hitam</p>
-                            <p><b>Jum'at</b>: Jilbab Ungu Muda, Baju Putih List Ungu, Rok Ungu, Sepatu Hitam</p>
-                            <p><b>Sabtu</b>: Seragam Pramuka, Sepatu Hitam</p>
+                    <div class="visi-card">
+                        <h3>VISI</h3>
+                        <blockquote>
+                            "Terbentuknya Lulusan Yang Berilmu, Beramal, Ikhlas & Istiqomah"
+                        </blockquote>
+                    </div>
+                    
+                    <div class="misi-card">
+                        <h3>MISI</h3>
+                        <ol>
+                            <li>Mempersiapkan lulusan yang menguasai kompetensi di bidang Ilmu Agama & Ilmu Pengetahuan.</li>
+                            <li>Meningkatkan prestasi bidang ekstra kurikuler.</li>
+                            <li>Membentuk manusia yang giat beramal.</li>
+                            <li>Mempersiapkan lulusan yang mengerti akan nilai-nilai moral/akhlak serta penerapannya dalam kehidupan sehari-hari.</li>
+                            <li>Membentuk manusia yang ikhlas dalam beramal.</li>
+                            <li>Membentuk manusia yang istiqomah.</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        
+        <section class="alur-ppdb" id="alur">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Alur Pendaftaran PPDB</h2>
+                    <p>Pendaftaran dilakukan secara offline. Ikuti 5 langkah mudah di bawah ini.</p>
+                </div>
+
+                <ol>
+                    <li>
+                        <strong>1. Unduh/Ambil Berkas</strong>
+                        Calon siswa dapat mengunduh formulir dari situs ini ATAU mengambilnya langsung di sekretariat madrasah.
+                    </li>
+                    <li>
+                        <strong>2. Siapkan Dokumen</strong>
+                        Melengkapi formulir dan melampirkan berkas (Fotokopi Ijazah/SKL, Fotokopi KK, Pas Foto 3x4).
+                    </li>
+                    <li>
+                        <strong>3. Kunjungi Madrasah</strong>
+                        Membawa berkas lengkap ke Sekretariat PPDB MA Attaqwa 03 (Senin - Jumat, Pkl 08.00 - 14.00 WIB).
+                    </li>
+                    <li>
+                        <strong>4. Ikuti Tes Seleksi</strong>
+                        Mendapatkan jadwal dan mengikuti tes seleksi (Tes Potensi Akademik & Baca Tulis Al-Qur'an).
+                    </li>
+                    <li>
+                        <strong>5. Pengumuman Hasil</strong>
+                        Hasil seleksi akan diumumkan di papan informasi madrasah dan di situs web ini.
+                    </li>
+                </ol>
+
+                <div class="alur-cta">
+                    <a href="#" class="cta-button">Unduh Formulir (PDF)</a> 
+                    </div>
+
+            </div>
+        </section>
+
+        <section class="jurusan" id="jurusan">
+            <div class="container">
+                <div class="section-title">
+                    <h2 style="color: var(--hijau-attaqwa);">Program Peminatan</h2>
+                </div>
+                <div class="jurusan-grid">
+                    <div class="jurusan-item">MIPA (Matematika & IPA)</div>
+                    <div class="jurusan-item">IPS (Ilmu Pengetahuan Sosial)</div>
+                    <div class="jurusan-item">IIK (Ilmu-Ilmu Keagamaan)</div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="galeri" id="galeri">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Galeri Kegiatan Kami</h2>
+                    <p>Lihat suasana belajar dan aktivitas di MA Attaqwa 03.</p>
+                </div>
+                
+                <div class="galeri-grid">
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan1.jpg" alt="Foto Kegiatan 1">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan2.jpg" alt="Foto Kegiatan 2">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan3.jpg" alt="Foto Kegiatan 3">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan4.jpg" alt="Foto Kegiatan 4">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan5.jpg" alt="Foto Kegiatan 5">
+                    </div>
+                    <div class="galeri-item">
+                        <img src="galeri/kegiatan6.jpg" alt="Foto Kegiatan 6">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section class="ekskul" id="ekskul">
+            <div class="container">
+                <div class="section-title">
+                    <h2>Ekstrakurikuler Unggulan</h2>
+                    <p>Geser untuk melihat lebih banyak kegiatan</p>
+                </div>
+            </div>
+            
+            <div class="ekskul-container">
+                
+                <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+Paskibra" alt="Paskibra">
+                    <div class="ekskul-title">
+                        <h3>Paskibra</h3>
+                    </div>
+                </div>
+                
+                <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+Pramuka" alt="Pramuka">
+                    <div class="ekskul-title">
+                        <h3>Pramuka</h3>
+                    </div>
+                </div>
+                
+                <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+KIR" alt="KIR">
+                    <div class="ekskul-title">
+                        <h3>KIR (Karya Ilmiah Remaja)</h3>
+                    </div>
+                </div>
+                
+                <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+Olahraga" alt="Olahraga">
+                    <div class="ekskul-title">
+                        <h3>Futsal & Basket</h3>
+                    </div>
+                </div>
+                
+                <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+Rohis" alt="Rohis">
+                    <div class="ekskul-title">
+                        <h3>Rohis (Kerohanian Islam)</h3>
+                    </div>
+                </div>
+                
+                 <div class="ekskul-card">
+                    <img src="https://via.placeholder.com/300x400/cccccc/999999?text=Foto+Hadroh" alt="Hadroh">
+                    <div class="ekskul-title">
+                        <h3>Hadroh</h3>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+        
+        <section class="berita" id="berita">
+             <div class="container">
+                <div class="section-title">
+                    <h2>Berita & Informasi Terbaru</h2>
+                </div>
+                
+                <div class="berita-grid">
+                    
+                    <div class="berita-card">
+                        <img src="galeri/kegiatan5.jpg" alt="Gambar Berita 1">
+                        <div class="berita-card-content">
+                            <p class="berita-meta">22 Oktober 2025 | PRESTASI</p>
+                            <h3>MA Attaqwa 03 Raih Juara 1 Lomba Cerdas Cermat</h3>
+                            <p>Siswa kami berhasil menunjukkan prestasi gemilang dalam ajang Lomba Cerdas Cermat tingkat Kabupaten Bekasi...</p>
+                            <a href="#">Baca Selengkapnya &rarr;</a>
                         </div>
-                    </details>
-
-                    <details>
-                        <summary>Seragam Putra</summary>
-                        <div>
-                            <p><b>Senin-Selasa</b>: Peci Hitam, Baju Putih, Dasi Hitam, Celana Hitam, Sepatu Hitam</p>
-                            <p><b>Rabu-Kamis</b>: Peci Hitam, Baju Batik, Celana Hitam, Sepatu hitam</p>
-                            <p><b>Jum'at</b>: Peci Hitam, Baju Putih List Ungu, Celana Ungu, Sepatu Hitam</p>
-                            <p><b>Sabtu</b>: Seragam Pramuka, Sepatu Hitam</p>
+                    </div>
+                    
+                    <div class="berita-card">
+                        <img src="galeri/kegiatan3.jpg" alt="Gambar Berita 2">
+                        <div class="berita-card-content">
+                            <p class="berita-meta">20 Oktober 2025 | KEGIATAN</p>
+                            <h3>Peringatan Maulid Nabi Muhammad SAW di Madrasah</h3>
+                            <p>Kegiatan Maulid Nabi berlangsung khidmat, diisi dengan tausiyah, pembacaan rawi, dan doa bersama seluruh siswa...</p>
+                            <a href="#">Baca Selengkapnya &rarr;</a>
                         </div>
-                    </details>
-                </div>
-
-                <div class="card" style="background-color: #f4f8ff; text-align: center;">
-                    <h3>Kontrol Orang Tua</h3>
-                    <p>Akses portal khusus orang tua untuk memantau informasi kegiatan, absensi harian, dan absensi pramuka siswa.</p>
-                    <a href="ortu.html" class="button">Buka Portal Ortu</a>
-                </div>
-            </div>
-        </section>
-
-        <section id="vision" class="container">
-            <h2>Visi, Misi & Tujuan</h2>
-            <div class="info-grid">
-                <div class="card">
-                    <h3>Visi</h3>
-                    <p>Terwujudnya Siswa Yang Berprestasi, Agamis, Berkarakter, Dan Berwawasan Lingkungan.</p>
-                </div>
-                <div class="card">
-                    <h3>Misi</h3>
-                    <ul>
-                        <li>Mewujudkan Peningkatan Prestasi Siswa Dalam Bidang Akademik.</li>
-                        <li>Mengoptimalkan Perencanaan, Pelaksanaan, Dan Penilaian Pembelajaran.</li>
-                        <li>Mewujudkan Peningkatan Prestasi Siswa Dalam Bidang Non Akademik.</li>
-                        <li>Melaksanakan Manajemen Madrasah Berdasarkan 8 SNP.</li>
-                        <li>Membudayakan Perilaku Agamis Dalam Berbagai Aspek Kehidupan Di Madrasah.</li>
-                        <li>Melaksanakan Pembiasaan Sholat Berjamaah Dan Membaca Al Qur'an.</li>
-                        </ul>
-                </div>
-                <div class="card">
-                    <h3>Tujuan</h3>
-                    <ul>
-                        <li>Meningkatkan Pencapaian KKM Pada Setiap Tahun.</li>
-                        <li>Mewujudkan Peningkatan Perolehan Nilai UM.</li>
-                        <li>Mampu Bersaing Dalam Lomba Bidang Seni, Keagamaan, dan Olahraga.</li>
-                        <li>Terwujudnya Manajemen Berbasis Madrasah Yang Baik.</li>
-                        <li>Terlaksananya Budaya 4S (Senyum, Sapa, Salam, Santun).</li>
-                        </ul>
+                    </div>
+                    
+                    <div class="berita-card">
+                        <img src="https://via.placeholder.com/400x220/cccccc/999999?text=Gambar+Berita+3" alt="Gambar Berita 3">
+                        <div class="berita-card-content">
+                            <p class="berita-meta">18 Oktober 2025 | PENGUMUMAN</p>
+                            <h3>Jadwal Ujian Tengah Semester (UTS) Ganjil</h3>
+                            <p>Berikut adalah informasi resmi mengenai jadwal pelaksanaan Ujian Tengah Semester (UTS) Ganjil Tahun Ajaran 2025/2026...</p>
+                            <a href="#">Baca Selengkapnya &rarr;</a>
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
         </section>
 
-        <section id="galeri" class="container">
-            <h2>Galeri Kegiatan</h2>
-            <div class="gallery-grid">
-                <img src="foto/mos 1.jpg" alt="Kegiatan Masa Orientasi Siswa hari pertama" loading="lazy">
-                <img src="foto/mop a.jpg" alt="Kegiatan Masa Orientasi Pramuka" loading="lazy">
-                <img src="foto/anbk.jpg" alt="Pelaksanaan ANBK di lab komputer" loading="lazy">
-                <img src="foto/mbg1.jpg" alt="Siswa mengikuti kegiatan Marching Band" loading="lazy">
-                <img src="foto/puskes1.jpg" alt="Pemeriksaan kesehatan dari Puskesmas" loading="lazy">
-                <img src="foto/santri1.jpg" alt="Peringatan Hari Santri Nasional" loading="lazy">
-            </div>
-            <div class="gallery-footer">
-                <a href="galeri-lengkap.html" class="button">Lihat Semua Foto Kegiatan</a>
-            </div>
-        </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer" id="kontak">
         <div class="container">
-            <p>&copy; 2025 MA. Attaqwa-03. Hak Cipta Dilindungi.</p>
-            <p>Desa Segaramakmur, Kec. Tarumajaya, Kab. Bekasi 17211</p>
+            
+            <img src="logo.jpg" alt="Logo MA Attaqwa 03" class="footer-logo">
+
+            <h3>MADRASAH ALIYAH ATTAQWA 03 TARUMAJAYA</h3>
+            <p>
+                Jl. Raya Tarumajaya No. XX, Setia Asih, Kec. Tarumajaya,
+                <br>
+                Kabupaten Bekasi, Jawa Barat 17215
+            </p>
+            <p>&copy; 2025 MA Attaqwa 03 Tarumajaya. Seluruh hak cipta dilindungi.</p>
         </div>
     </footer>
+
+<div class="fab" id="fab-chat-button" title="Tanya AI Assistant">
+    <span>💬</span>
+</div>
+
+<div class="chat-widget" id="chat-widget">
+    <div class="chat-header">
+        <h3>AI Assistant MA Attaqwa 03</h3>
+        <button id="close-chat" title="Tutup">✕</button>
+    </div>
+    <div class="chat-log" id="chat-log">
+        <div class="chat-message ai">
+            <p>Halo! Saya asisten AI MA Attaqwa 03. Ada yang bisa dibantu seputar pendaftaran atau visi misi sekolah?</p>
+        </div>
+    </div>
+    <form class="chat-form" id="chat-form">
+        <input type="text" id="chat-input" placeholder="Ketik pertanyaan Anda..." autocomplete="off" required>
+        <button type="submit">Kirim</button>
+    </form>
+</div>
+
+<script src="script.js" defer></script>
 
 </body>
 </html>
